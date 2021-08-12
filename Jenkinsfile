@@ -4,6 +4,11 @@ pipeline{
         maven 'maven381'
     }
     stages{
+          stage('Build'){
+            steps{
+                sh "mvn install -DskipTests"
+            }
+        }
         stage('Build'){
             steps{
                 sh "mvn install -DskipTests"
